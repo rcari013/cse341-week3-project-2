@@ -1,5 +1,5 @@
 import express from "express";
-import contactsRoutes from "./routes/contacts.js";
+import moviesRoutes from "./routes/movies.js";
 import { errorHandler } from "./middleware/errorHandler.js";
 
 
@@ -14,10 +14,10 @@ app.use(express.json());
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.get("/", (req, res) => {
-  res.json({ message: "CSE 341 API running" });
+  res.json({ message: "CSE 341 Project 2 API running" });
 });
 
-app.use("/contacts", contactsRoutes);
+app.use("/movies", moviesRoutes);
 
 app.use(errorHandler);
 

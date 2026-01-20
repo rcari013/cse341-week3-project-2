@@ -1,0 +1,44 @@
+### Render - Get all movies
+GET https://cse341-week3-project-2.onrender.com/movies
+Accept: application/json
+
+
+### Render - Get movie by ID
+GET https://cse341-week3-project-2.onrender.com/movies/65a123456789abcdef123456
+Accept: application/json
+
+
+### Create Movie (Render)
+POST https://cse341-week3-project-2.onrender.com/movies
+Content-Type: application/json
+
+{
+  "title": "Harry Potter and the Deathly Hallows",
+  "directors": "David Yates",
+  "releaseYear": 2011,
+  "genre": "Fantasy",
+  "imdbRating": 8.1,
+  "durationMinutes": 146,
+  "language": "English",
+  "isAvailable": true
+}
+
+
+### Update Movie (Render)
+PUT https://cse341-week3-project-2.onrender.com/movies/65a123456789abcdef123456
+Content-Type: application/json
+
+{
+  "title": "Harry Potter and the Deathly Hallows",
+  "directors": "David Yates",
+  "releaseYear": 2011,
+  "genre": "Fantasy",
+  "imdbRating": 8.2,
+  "durationMinutes": 146,
+  "language": "English",
+  "isAvailable": false
+}
+
+
+### Delete Movie (Render)
+DELETE https://cse341-week3-project-2.onrender.com/movies/65a123456789abcdef123456

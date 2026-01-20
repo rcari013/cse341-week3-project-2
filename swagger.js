@@ -14,7 +14,7 @@ const options = {
         description: "Local server"
       },
       {
-        url: "https://cse-341-project1-romel-q15q.onrender.com",
+        url: "https://cse341-week3-project-2.onrender.com/",
         description: "Production server"
       }
     ]

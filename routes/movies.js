@@ -143,3 +143,7 @@ router.put("/:id", updateMovie);
 router.delete("/:id", deleteMovie);
 
 export default router;
+
+
+// Routes for movies collection
+// Logic implemented by Romelito Carino; external tools used for reference and debugging

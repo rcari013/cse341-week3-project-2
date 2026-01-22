@@ -127,3 +127,6 @@ router.put("/:id", updateReview);
 router.delete("/:id", deleteReview);
 
 export default router;
+
+// Routes for reviews collection
+// Logic implemented by Romelito Carino; external tools used for reference and debugging

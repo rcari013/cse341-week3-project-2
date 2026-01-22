@@ -40,7 +40,10 @@ export const updateReview = async (req, res) => {
     const updatedReview = await Review.findByIdAndUpdate(
       req.params.id,
       req.body,
-      { new: true }
+      {
+        new: true,
+        runValidators: true
+      }
     );
 
     if (!updatedReview) {

@@ -87,3 +87,6 @@ export const deleteMovie = async (req, res, next) => {
     next(error);
   }
 };
+
+// CRUD controller for movies collection
+// Logic implemented by Romelito Carino; external tools used for reference and debugging

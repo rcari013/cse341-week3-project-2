@@ -1,5 +1,6 @@
 import express from "express";
 import moviesRoutes from "./routes/movies.js";
+import reviewsRoutes from "./routes/reviews.js";
 import { errorHandler } from "./middleware/errorHandler.js";
 
 
@@ -18,6 +19,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/movies", moviesRoutes);
+app.use("/reviews", reviewsRoutes);
 
 app.use(errorHandler);
 

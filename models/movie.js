@@ -64,8 +64,11 @@ const movieSchema = new mongoose.Schema(
 
   },
   {
-    versionKey: false // 🔥 removes __v
+    versionKey: false
   }
 );
 
 export default mongoose.model("Movie", movieSchema);
+
+// Schema validation for movies collection
+// Logic implemented by Romelito Carino; external tools used for reference and debugging

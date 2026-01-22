@@ -4,9 +4,9 @@ const options = {
   definition: {
     openapi: "3.0.0",
     info: {
-      title: "Contacts API",
-      version: "1.0.0",
-      description: "API for managing contacts (CSE 341 Project)"
+      title: "Movies and Reviews API",
+      version: "1.0.2",
+      description: "API for managing movies and reviews collections (CSE 341 Project)"
     },
     servers: [
       {

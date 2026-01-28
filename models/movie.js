@@ -38,7 +38,7 @@ const movieSchema = new mongoose.Schema(
       ]
     },
 
-    imdbRating: {
+    rating: {
       type: Number,
       min: 0,
       max: 10
@@ -58,10 +58,8 @@ const movieSchema = new mongoose.Schema(
 
     isAvailable: {
       type: Boolean,
-      enum: [true, false],
       default: true
     }
-
   },
   {
     versionKey: false

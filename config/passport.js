@@ -7,17 +7,13 @@ export const configurePassport = () => {
     return;
   }
 
-  const callbackURL =
-    process.env.NODE_ENV === "production"
-      ? "https://cse341-week3-project-2.onrender.com/auth/github/callback"
-      : "http://localhost:3000/auth/github/callback";
-
   passport.use(
     new GitHubStrategy(
       {
         clientID: process.env.GITHUB_CLIENT_ID,
         clientSecret: process.env.GITHUB_CLIENT_SECRET,
-        callbackURL
+        callbackURL:
+          "https://cse341-week3-project-2.onrender.com/auth/github/callback"
       },
       (accessToken, refreshToken, profile, done) => {
         done(null, profile);

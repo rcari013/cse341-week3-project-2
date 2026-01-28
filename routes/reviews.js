@@ -1,4 +1,6 @@
 import express from "express";
+import { authenticate } from "../middleware/authenticate.js";
+
 import {
   getAllReviews,
   getReviewById,
@@ -78,7 +80,7 @@ router.get("/:id", getReviewById);
  *       201:
  *         description: Review created successfully
  */
-router.post("/", createReview);
+router.post("/", authenticate, createReview);
 
 /**
  * @swagger
@@ -105,7 +107,7 @@ router.post("/", createReview);
  *       404:
  *         description: Review not found
  */
-router.put("/:id", updateReview);
+router.put("/:id", authenticate, updateReview);
 
 /**
  * @swagger
@@ -124,7 +126,7 @@ router.put("/:id", updateReview);
  *       204:
  *         description: Review deleted successfully
  */
-router.delete("/:id", deleteReview);
+router.delete("/:id", authenticate, deleteReview);
 
 export default router;
 

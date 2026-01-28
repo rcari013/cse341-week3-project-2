@@ -3,6 +3,9 @@ dotenv.config();
 
 import app from "./app.js";
 import { connectDB } from "./data/connect.js";
+import { configurePassport } from "./config/passport.js";
+
+configurePassport();
 
 const port = process.env.PORT || 3000;
 

@@ -1,4 +1,5 @@
 import express from "express";
+import { authenticate } from "../middleware/authenticate.js";
 import {
   getAllMovies,
   getMovieById,
@@ -94,7 +95,7 @@ router.get("/:id", getMovieById);
  *       201:
  *         description: Movie created successfully
  */
-router.post("/", createMovie);
+router.post("/", authenticate, createMovie);
 
 /**
  * @swagger
@@ -121,7 +122,7 @@ router.post("/", createMovie);
  *       404:
  *         description: Movie not found
  */
-router.put("/:id", updateMovie);
+router.put("/:id", authenticate, updateMovie);
 
 /**
  * @swagger
@@ -140,7 +141,7 @@ router.put("/:id", updateMovie);
  *       204:
  *         description: Movie deleted successfully
  */
-router.delete("/:id", deleteMovie);
+router.delete("/:id", authenticate, deleteMovie);
 
 export default router;
 
